@@ -1,0 +1,57 @@
+version: '3.8'
+
+
+services:
+  cassandra_1:
+    image: cassandra:latest
+    container_name: cassandra_!
+    ports:
+      - "9042:9042"
+    volumes:
+      - ./cassandra:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=MyCluster
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RAC1
+      - CASSANDRA_SEEDS=cassandra
+      - CASSANDRA_AUTO_BOOTSTRAP=false
+      - CASSANDRA_NUM_TOKENS=1
+      - CASSANDRA_START_RPC=true
+      - CASSANDRA_RPC_ADDRESS=
+
+  cassandra_2:
+    image: cassandra:latest
+    container_name: cassandra_2
+    ports:
+      - "9043:9042"
+    volumes:
+      - ./cassandra:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=MyCluster
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RAC2
+      - CASSANDRA_SEEDS=cassandra
+      - CASSANDRA_AUTO_BOOTSTRAP=false
+      - CASSANDRA_NUM_TOKENS=1
+      - CASSANDRA_START_RPC=true
+      - CASSANDRA_RPC_ADDRESS=
+
+  cassandra_3:
+    image: cassandra:latest
+    container_name: cassandra_3
+    ports:
+      - "9044:9042"
+    volumes:
+      - ./cassandra:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=MyCluster
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_DC=DC2
+      - CASSANDRA_RACK=RAC1
+      - CASSANDRA_SEEDS=cassandra
+      - CASSANDRA_AUTO_BOOTSTRAP=false
+      - CASSANDRA_NUM_TOKENS=1
+      - CASSANDRA_START_RPC=true
+      - CASSANDRA_RPC_ADDRESS=
