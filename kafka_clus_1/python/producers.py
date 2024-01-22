@@ -17,7 +17,7 @@ if __name__ == "__main__":
         dummy_message = generate_message()
         
         # Send it to our 'messages' topic
-        print(f'Producing message @ {datetime.now()} | Message = {str(dummy_message)}')
+        print(f'Producing message @ {datetime.datetime.now()} | Message = {str(dummy_message)}')
         producer.send('messages', dummy_message)
         
         # Sleep for a random number of seconds
