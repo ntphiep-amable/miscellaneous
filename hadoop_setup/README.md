@@ -1,5 +1,6 @@
 # Setup Guide for Standalone Hadoop Cluster
 
+
 ## Prerequisites
 
 ● Operation system: Ubuntu 18.04 LTS (highly recommended)
@@ -8,11 +9,11 @@
 
 ● If you do not have Ubuntu, consider virtual machines
 
-○ VMWare Fusion (MacOS)
+- VMWare Fusion (MacOS)
 
-○ Oracle Virtual Box (Windows)
+- Oracle Virtual Box (Windows)
 
-○ Docker (Windows)
+- Docker (Windows)
 
 ## Installation
 
