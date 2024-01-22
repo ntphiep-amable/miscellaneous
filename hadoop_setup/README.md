@@ -1,7 +1,7 @@
 # Setup Guide for Standalone Hadoop Cluster
 
 ## Document:
-Mister An: https://drive.google.com/drive/u/0/folders/1hn-FP6oeMfoVJ3hXeX3MOsfUHpoLXZ2Z
+Mr. An: https://drive.google.com/drive/u/0/folders/1hn-FP6oeMfoVJ3hXeX3MOsfUHpoLXZ2Z
 
 
 ## Prerequisites
@@ -115,20 +115,28 @@ bin/hdfs namenode -format
 2. Start NameNode daemon and DataNode daemon
 ```bash
 sbin/start-dfs.sh
-# check log output in .../logs as needed
-# if you fail to start a daemon then,
+```
+
+Check log output in .../logs as needed,
+If you fail to start a daemon then:
+
+
+```bash
 sbin/stop-all.sh
 sudo rm -rf /tmp/*
 sudo reboot
 bin/hdfs namenode -format -force
-
 # then try to start again
 ```
 
 
 
+3. Browse the web interface for the `NameNode`; by default it is available at: http://localhost:9870/
 
-3. Browse the web interface for the NameNode; by default it is available at: http://localhost:9870/
+
+![Alt text](image.png)
+
+
 
 4. Make the HDFS directories required to execute MapReduce jobs:
 ```bash
@@ -143,6 +151,7 @@ bin/hdfs dfs -mkdir input
 bin/hdfs dfs -put etc/hadoop/*.xml /user/abc/input
 ```
 
+![Alt text](image-1.png)
 
 6. Run some of the examples provided (need to set up YARN in advance)
 ```bash
@@ -152,7 +161,7 @@ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep i
 
 ### Ensure the corresponding jar file exists in the folder mapreduce/
 
-**Note**: after setting up YARN, this step requires [Connecting to ResourceManager at /0.0.0.0:8032]
+**Note**: **after setting up YARN, this step requires [Connecting to ResourceManager at /0.0.0.0:8032]**
 
 7. Examine the output files: Copy the output files from the distributed file system to the local filesystem and examine them:
 ```bash
@@ -215,6 +224,8 @@ sbin/start-yarn.sh
 ```
 
 7. Browse the web interface for the ResourceManager; by default it is available at: http://localhost:8088/
+
+![Alt text](image-2.png)
 
 8. Run a MapReduce job.
 
