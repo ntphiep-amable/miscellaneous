@@ -8,9 +8,13 @@ RUN set -ex; \
 WORKDIR /opt/eventsim
 
 COPY eventsim.sh /opt/eventsim/eventsim.sh
+
 COPY examples /opt/eventsim/examples
+
 COPY data /opt/eventsim/data
+
 COPY target/eventsim-assembly-2.0.jar /opt/eventsim/eventsim-assembly-2.0.jar
 
 RUN chmod +x /opt/eventsim/eventsim.sh
+
 ENTRYPOINT ["/opt/eventsim/eventsim.sh"]  

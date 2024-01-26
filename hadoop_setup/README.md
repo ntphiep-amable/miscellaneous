@@ -1,4 +1,4 @@
-# Setup Guide for Standalone Hadoop Cluster
+# Setup Guide for Standalone Hadoop Cluster (Single Node)
 
 ## Document:
 Mr. An: https://drive.google.com/drive/u/0/folders/1hn-FP6oeMfoVJ3hXeX3MOsfUHpoLXZ2Z
