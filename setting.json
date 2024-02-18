@@ -1,0 +1,85 @@
+"editor.tokenColorCustomizations": {
+        "[Material Theme Ocean High Contrast]": {
+            "textMateRules": [
+                {
+                    "scope": "entity.name.type.class",
+                    "settings": {
+                        "foreground": "#83ff83",
+                        "fontStyle": ""
+                    }
+                },
+
+                {
+                    "scope": ["string", "constant.numeric", "constant.language"],
+                    "settings": {
+                        "foreground": "#FFCB6B",
+                        "fontStyle": "italic"
+                    }
+                },
+
+                {
+                    "scope": ["keyword", "keyword.control", "keyword.other"],
+                    "settings": {
+                        "foreground": "#1fffff",
+                        "fontStyle": "italic"
+
+                        
+                    }
+                },
+
+                {
+                    "scope": ["entity.name.function", "meta.function-call", "entity.name.method", "support.function"],
+                    "settings": {
+                        "foreground": "#5599ff",
+                        "fontStyle": ""
+                    }
+                },
+
+                {
+                    "scope": ["storage.type", "storage.modifier"],
+                    "settings": {
+                        "foreground": "#ee98ff",
+                        "fontStyle": "italic"
+                    }
+                },
+
+                {
+                    "scope": "variable",
+                    "settings": {
+                        "foreground": "#d6d5d5cc",
+                        "fontStyle": "italic"
+                    }
+                },
+
+                {
+                    "scope": "entity.name",
+                    "settings": {
+                        "foreground": "#f08071",
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        }
+    },
+
+"terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Command Promptd": {
+            "path": "C:\\Windows\\Sysnative\\cmd.exe",
+            "args": []
+        }
+    },
