@@ -1,4 +1,8 @@
 # Setup Guide for Standalone Hadoop Cluster (Single Node)
+Notes:
+- [Setup guide 1](https://123host.vn/tailieu/kb/vps/cai-dat-va-cau-hinh-hadoop-cluster.html)
+
+
 
 ## Document:
 Mr. An: https://drive.google.com/drive/u/0/folders/1hn-FP6oeMfoVJ3hXeX3MOsfUHpoLXZ2Z
